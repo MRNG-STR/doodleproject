@@ -1,0 +1,326 @@
+{
+	"info": {
+		"_postman_id": "dab75bb2-dbba-469e-943a-87c1d8d59d2f",
+		"name": "purchaseProj",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/userpurchase/upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM4NTY4ODM1LCJleHAiOjE2Mzg2NTUyMzV9.XetuaG89ejk53w-lYx4Fa4xNfQenEKFfnT39j-UrIEc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Dell Lattitude E6430/Downloads/Untitled spreadsheet - Sheet1.csv"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/userpurchase/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"userpurchase",
+						"upload"
+					]
+				},
+				"description": "To upload product list .allows new data update the existing one "
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/auth/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"glenmaxwell\",\r\n    \"email\":\"glenmax@gmail.com\",\r\n    \"password\":\"Glen@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				},
+				"description": "to sign up new user"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/auth/signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"arunbalaji\",\r\n    \"password\":\"Arun@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				},
+				"description": "sample res:\r\n{\r\n    \"username\": \"arunbalaji\",\r\n    \"email\": \"arunbalaji748@gmail.com\",\r\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjM4NjUxMDQ3LCJleHAiOjE2Mzg3Mzc0NDd9.gmhiO1JkzhfZzpmaD6ywSpmeQGFjZypJ-17nt5BKxpU\"\r\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/userpurchase/createorder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjM4NjUxMDQ3LCJleHAiOjE2Mzg3Mzc0NDd9.gmhiO1JkzhfZzpmaD6ywSpmeQGFjZypJ-17nt5BKxpU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productname\":\"LG 50 inch\",\r\n    \"productid\":\"3\",\r\n    \"quantity\":\"4\",\r\n    \"userid\":\"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/userpurchase/createorder",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"userpurchase",
+						"createorder"
+					]
+				},
+				"description": "create order with this "
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/userpurchase/updateorder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjM4NjUxMDQ3LCJleHAiOjE2Mzg3Mzc0NDd9.gmhiO1JkzhfZzpmaD6ywSpmeQGFjZypJ-17nt5BKxpU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productname\":\"SAMSUNG 50 inch\",\r\n    \"productid\":\"6\",\r\n    \"quantity\":\"2\",\r\n    \"userid\":\"3\",\r\n    \"orderid\":\"5    \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/userpurchase/updateorder",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"userpurchase",
+						"updateorder"
+					]
+				},
+				"description": "update order"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/userpurchase/cancelOrder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM4NTY4ODM1LCJleHAiOjE2Mzg2NTUyMzV9.XetuaG89ejk53w-lYx4Fa4xNfQenEKFfnT39j-UrIEc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userid\":\"3\",\r\n    \"orderid\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/userpurchase/cancelOrder",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"userpurchase",
+						"cancelOrder"
+					]
+				},
+				"description": "cancel order"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/userpurchase/listcustomerproduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM4NTY4ODM1LCJleHAiOjE2Mzg2NTUyMzV9.XetuaG89ejk53w-lYx4Fa4xNfQenEKFfnT39j-UrIEc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"searchproduct\":\"\",\r\n    \"searchcustomer\":\"\",\r\n    \"sort\":\"ASC\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/userpurchase/listcustomerproduct",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"userpurchase",
+						"listcustomerproduct"
+					]
+				},
+				"description": "api to list ordered products based on the customer. (Should include search and sort functionality)"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/userpurchase/listorderprodcount",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM4NTY4ODM1LCJleHAiOjE2Mzg2NTUyMzV9.XetuaG89ejk53w-lYx4Fa4xNfQenEKFfnT39j-UrIEc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"searchproduct\":\"\",\r\n    \"searchcustomer\":\"\",\r\n    \"fromdate\":\"2021-12-05\",\r\n    \"todate\":\"2021-12-05\",\r\n    \"sort\":\"ASC\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/userpurchase/listorderprodcount",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"userpurchase",
+						"listorderprodcount"
+					]
+				},
+				"description": "Api to list ordered product count based on date."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/userpurchase/listcustprodcount",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM4NTY4ODM1LCJleHAiOjE2Mzg2NTUyMzV9.XetuaG89ejk53w-lYx4Fa4xNfQenEKFfnT39j-UrIEc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"searchproduct\":\"\",\r\n    \"searchcustomer\":\"\",\r\n    \"sort\":\"ASC\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/userpurchase/listcustprodcount",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"userpurchase",
+						"listcustprodcount"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
